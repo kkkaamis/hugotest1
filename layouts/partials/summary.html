@@ -1,0 +1,19 @@
+<div class="pb-8">
+	<div class="font-serif font-medium text-xl">
+		<a href="{{ .Permalink }}">
+			{{ .Title }}
+		</a>
+	</div>
+	{{/*I just don't like .Summary */}}
+	{{/*  <div class="pl-4  text-gray-600 font-light italic">  */}}
+	{{/*  {{ if   .Description}}{{ .Description }}{{else}}{{ .Summary }}{{end}}
+</div> */}}
+	{{ with .Description }}
+	<div class="font-serif text-gray-600 font-light pt-1">
+		{{ .}}</div>
+
+	{{ end }}
+	<div class="flex flex-wrap justify-between pt-1">
+		{{- partial "tags.html" . -}}
+	</div>
+</div>
