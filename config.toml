@@ -1,0 +1,61 @@
+baseURL = 'http://example.org/'
+languageCode = 'lv'
+title = 'E-mājas'
+[module]
+[[module.imports]]
+  path = "github.com/heyeshuang/hugo-theme-tokiwa"
+DefaultContentLanguage = "lv"
+author = "SIA E-lats"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+hasCJKLanguage = true
+#languageCode = "cn"
+theme = "hugo-theme-tokiwa"
+[markup]
+[markup.highlight]
+style = "monokailight"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+bannerFont = "fonts/exampleFont" 
+description = """
+Izvēlne
+"""
+[theme.tokiwa]
+showDate = false
+#favicon = "img/favicon-32x32.png" 
+fuse = true # for searchbox. "JSON" must added to output contents. See [outputs].
+math = true # for introducing $KaTeX$
+
+[menu]
+# Shown in the side menu.
+[[menu.main]]
+identifier = "par-projektu"
+name = "Par Projektu"
+url = "/izvelne/par-projektu/"
+weight = 1
+[[menu.main]]
+name = "Komforts"
+url = "/izvelne/komforts/"
+weight = 2
+
+[[menu.main]]
+name = "Drošība"
+url = "/izvelne/drosiba/"
+weight = 2
+
+[[menu.main]]
+identifier = "maja"
+name = "Mājoklis"
+url = "/izvelne/majoklis/"
+weight = 3
+
+[taxonomies]
+
+[params.social]
+# any icon in layouts/partials/svg can be used by the name without the "-line.svg"
+
+[outputs]
+home = ["HTML", "JSON"]
